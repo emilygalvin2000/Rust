@@ -105,8 +105,8 @@ fn main() {
     let actual = test.targets();
 
     // print predictions and actual targets
-    println!("Predictions: {:?}", predictions);
-    println!("Actual targets: {:?}", actual);
+    println!("Predictions: {}", predictions);
+    println!("Actual targets: {}", actual);
 
     // calculating accuracy of model by hand
     let mut correct_count = 0;
@@ -122,11 +122,11 @@ fn main() {
     }
 
     let accuracy = correct_count as f32 / total_count as f32;
-    println!("Accuracy: {:.2}%", accuracy *100.0);
+    println!("Accuracy: {}%", accuracy *100.0);
     
     // compute and print confusion matrix - only prints TP of 0 class
     // let cm = predictions.confusion_matrix(&test).expect("Failed to compute confusion matrix");
-    // println!("{:?}", cm);
+    // println!("{}", cm);
 
     // end time
     let duration = start.elapsed();
